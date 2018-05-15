@@ -1,0 +1,15 @@
+<h3>Students</h3>
+<div>
+  <p>Enter Students</p>
+  <input type="text" #inp>
+  <button class="btn btn-primary" (click)="addStudent(inp.value)">Submit</button>
+</div>
+
+<div style="float: left; margin: 10px">
+  <button class="btn btn-success" (click)="listStudents()">Get All Students</button>
+  <ul>
+      <li *ngFor="let student of studentList">
+        {{student.name}}
+      </li>
+    </ul>
+</div>

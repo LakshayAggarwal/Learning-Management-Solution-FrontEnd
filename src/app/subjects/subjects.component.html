@@ -1,0 +1,18 @@
+<h3>Subjects</h3>
+<div>
+  <p>Enter Subject</p>
+  <input type="text" #inp>
+  <button class="btn btn-primary" (click)="addSubject(inp.value)">Submit</button>
+</div>
+
+<div style="float: right; margin: 10px">
+  <button class="btn btn-success" (click)="listSubjects()">Get All Subjects</button>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let subject of subjectList">
+      {{subject.name}}
+    </li>
+  </ul>
+</div>
